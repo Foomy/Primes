@@ -9,32 +9,33 @@ Primes::~Primes(void)
 {
 }
 
-bool Primes::isPrime(int number)
+bool Primes::isPrime(PrimeDataType number)
 {
-	int divisor,
-		divisible,
-		rootOfNumber;
-
 	// 1 isn't prime by definiton.
-	if (number < 2) {
+	if (2 > number)
+	{
 		return false;
 	}
 
 	//  Even numbers aren't prime too.
-	if (number % 2 == 0) {
+	if (0 == number % 2)
+	{
 		return false;
 	}
 
-	divisor = 3;
-	divisible = 0;
+	PrimeDataType divisor = 3;
+	PrimeDataType divisible = 0;
+	PrimeDataType rootOfNumber = static_cast<PrimeDataType>(round(sqrt(number)));
 
-	rootOfNumber = static_cast<int>(round(sqrt(number)));
-	do {
-		if (number%divisor == 0) {
+	do
+	{
+		if (0 == number % divisor)
+		{
 			divisible = 1;
+			break;
 		}
 		divisor++;
-	} while ((divisible > 0) || (divisor <= rootOfNumber));
+	} while (rootOfNumber > divisor);
 
 	if (divisible > 0) {
 		return false;
@@ -43,13 +44,15 @@ bool Primes::isPrime(int number)
 	return true;
 }
 
-int Primes::nextPrime(int number)
+PrimeDataType Primes::nextPrime(PrimeDataType number)
 {
-	int prime = 0;
-	int i = number + 1;
+	PrimeDataType prime = 0;
+	PrimeDataType i = number + 1;
 
-	do {
-		if (this->isPrime(i)) {
+	do
+	{
+		if (this->isPrime(i))
+		{
 			prime = i;
 		}
 		i++;
@@ -58,13 +61,15 @@ int Primes::nextPrime(int number)
 	return prime;
 }
 
-int Primes::previousPrime(int number)
+PrimeDataType Primes::previousPrime(PrimeDataType number)
 {
-	int prime = 0;
-	int i = number - 1;
+	PrimeDataType prime = 0;
+	PrimeDataType i = number - 1;
 
-	do {
-		if (this->isPrime(i)) {
+	do
+	{
+		if (this->isPrime(i))
+		{
 			prime = i;
 		}
 		i--;

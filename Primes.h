@@ -11,16 +11,18 @@
 #pragma once
 #include <math.h>
 
+typedef unsigned long PrimeDataType;
+
 class Primes
 {
 private:
-	int number;
+	PrimeDataType number;
 
 public:
 	explicit Primes(void);
 	virtual ~Primes(void);
 
-	bool isPrime(int number);
-	int nextPrime(int number);
-	int previousPrime(int number);
+	bool isPrime(PrimeDataType number);
+	PrimeDataType nextPrime(PrimeDataType number);
+	PrimeDataType previousPrime(PrimeDataType number);
 };
