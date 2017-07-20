@@ -32,10 +32,9 @@ bool Primes::isPrime(PrimeDataType number)
 		if (0 == number % divisor)
 		{
 			divisible = 1;
-			break;
 		}
 		divisor++;
-	} while (rootOfNumber > divisor);
+	} while ((0 == divisible) && (rootOfNumber > divisor));
 
 	if (divisible > 0) {
 		return false;
