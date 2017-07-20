@@ -33,7 +33,7 @@ bool Primes::isPrime(PrimeDataType number)
 		{
 			divisible = 1;
 		}
-		divisor++;
+		divisor += 2;
 	} while ((0 == divisible) && (rootOfNumber > divisor));
 
 	if (divisible > 0) {
