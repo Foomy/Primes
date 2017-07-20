@@ -8,77 +8,21 @@
  *		 09:58 <@cdTv> SirFoomy: wenn du die Primzahlen noch speicherst, brauchst du auch nur diese zum Testen verwenden
  */
 
+#pragma once
 #include <math.h>
+
+typedef unsigned long PrimeDataType;
 
 class Primes
 {
-	private:
-		int number;
+private:
+	PrimeDataType number;
 
-	public:
+public:
+	explicit Primes(void);
+	virtual ~Primes(void);
 
-		bool isPrime(int number)
-		{
-			int divisor,
-				divisible,
-				counter,
-				rootOfNumber;
-
-			// 1 isn't prime by definiton.
-			if (number < 2) {
-				return false;
-			}
-
-			//  Even numbers aren't prime too.
-			if (number%2 == 0) { 
-				return false;
-			}
-
-			divisor = 3;
-			divisible = 0;
-
-			rootOfNumber = static_cast<int>(round(sqrt(number)));
-			do {
-				if (number%divisor == 0) {
-					divisible = 1;
-				}
-				divisor++;
-			} while ( (divisible > 0) || (divisor <= rootOfNumber));
-
-			if (divisible > 0) {
-				return false;
-			}
-
-			return true;
-		}
-
-		int nextPrime(int number)
-		{
-			int prime = 0;
-			int i = number+1;
-
-			do {
-				if (this->isPrime(i)) {
-					prime = i;
-				}
-				i++;
-			} while (prime == 0);
-
-			return prime;
-		}
-
-		int previousPrime(int number)
-		{
-			int prime = 0;
-			int i = number-1;
-
-			do {
-				if (this->isPrime(i)) {
-					prime = i;
-				}
-				i--;
-			} while (prime == 0);
-
-			return prime;
-		}
+	bool isPrime(PrimeDataType number);
+	PrimeDataType nextPrime(PrimeDataType number);
+	PrimeDataType previousPrime(PrimeDataType number);
 };
