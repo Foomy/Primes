@@ -1,0 +1,10 @@
+D:\documents\Visual Studio 2019\Projects\Primes\bin\Debug\Primes.exe.config
+D:\documents\Visual Studio 2019\Projects\Primes\bin\Debug\Primes.exe
+D:\documents\Visual Studio 2019\Projects\Primes\bin\Debug\Primes.pdb
+D:\documents\Visual Studio 2019\Projects\Primes\obj\Debug\Primes.csprojAssemblyReference.cache
+D:\documents\Visual Studio 2019\Projects\Primes\obj\Debug\Primes.Form1.resources
+D:\documents\Visual Studio 2019\Projects\Primes\obj\Debug\Primes.Properties.Resources.resources
+D:\documents\Visual Studio 2019\Projects\Primes\obj\Debug\Primes.csproj.GenerateResource.cache
+D:\documents\Visual Studio 2019\Projects\Primes\obj\Debug\Primes.csproj.CoreCompileInputs.cache
+D:\documents\Visual Studio 2019\Projects\Primes\obj\Debug\Primes.exe
+D:\documents\Visual Studio 2019\Projects\Primes\obj\Debug\Primes.pdb
