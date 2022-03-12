@@ -29,20 +29,15 @@ namespace Primes
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            long number;
-            string inputValue = textBoxInput.Text;
+            ulong number = ReadAndSanitizeInput(textBoxInput);
 
-            if ("" != inputValue) {
-                number = Convert.ToInt64(inputValue);
-
+            if (number > 1) {
                 Primes primes = new Primes();
 
-                textBoxIsPrime.Text     = "Nein";
-                checkBoxIsPrime.Checked = false;
+                textBoxIsPrime.Text = "Nein";
 
                 if (primes.isPrime(number)) {
-                    textBoxIsPrime.Text     = "Ja";
-                    checkBoxIsPrime.Checked = true;
+                    textBoxIsPrime.Text = "Ja";
                 }
 
                 textBoxNextPrime.Text = Convert.ToString(primes.nextPrime(number));
@@ -50,11 +45,25 @@ namespace Primes
             }
             else {
                 string caption = "Fehler!";
-                string message = "Please enter a natural number.";
+                string message = "Bitte geben Sie eine positive ganze Zahl größer 1 ein.";
 
                 MessageBoxButtons buttons = MessageBoxButtons.OK;
                 MessageBox.Show(message, caption, buttons);
             }
+        }
+
+        private ulong ReadAndSanitizeInput(TextBox textBoxInput)
+        {
+            ulong inputNumber;
+            string inputValue = textBoxInput.Text;
+
+            if ("" != inputValue) {
+                UInt64.TryParse(inputValue, out inputNumber);
+
+                return inputNumber;
+            }
+
+            return 0;
         }
     }
 }

@@ -8,3 +8,14 @@ D:\documents\Visual Studio 2019\Projects\Primes\obj\Debug\Primes.csproj.Generate
 D:\documents\Visual Studio 2019\Projects\Primes\obj\Debug\Primes.csproj.CoreCompileInputs.cache
 D:\documents\Visual Studio 2019\Projects\Primes\obj\Debug\Primes.exe
 D:\documents\Visual Studio 2019\Projects\Primes\obj\Debug\Primes.pdb
+D:\projects\Foomy\Primes\bin\Debug\Primes.exe.config
+D:\projects\Foomy\Primes\bin\Debug\Primes.exe
+D:\projects\Foomy\Primes\bin\Debug\Primes.pdb
+D:\projects\Foomy\Primes\obj\Debug\Primes.csproj.AssemblyReference.cache
+D:\projects\Foomy\Primes\obj\Debug\Primes.Form1.resources
+D:\projects\Foomy\Primes\obj\Debug\Primes.Properties.Resources.resources
+D:\projects\Foomy\Primes\obj\Debug\Primes.csproj.GenerateResource.cache
+D:\projects\Foomy\Primes\obj\Debug\Primes.csproj.CoreCompileInputs.cache
+D:\projects\Foomy\Primes\obj\Debug\Primes.exe
+D:\projects\Foomy\Primes\obj\Debug\Primes.pdb
+D:\projects\Foomy\Primes\obj\Debug\Primes.csproj.SuggestedBindingRedirects.cache

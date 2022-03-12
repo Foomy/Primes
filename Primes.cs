@@ -8,12 +8,14 @@ namespace Primes
 {
     class Primes
     {
-        public bool isPrime(long number)
+        private const int DIVISION_START_NUMBER = 3;
+
+        public bool isPrime(ulong number)
         {
-            long divisor;
-            long sqrtOfNumber;
+            ulong divisor;
+            ulong sqrtOfNumber;
             Boolean divisible;
-        
+
             // 1 is not prime by definition.
             if (number < 2) {
                 return false;
@@ -28,39 +30,42 @@ namespace Primes
                 return false;
             }
 
-            divisor = 3;
+            divisor = DIVISION_START_NUMBER;
             divisible = false;
-            sqrtOfNumber = Convert.ToInt64(Math.Sqrt(number));
+            sqrtOfNumber = (ulong)Math.Ceiling(Math.Sqrt(number));
 
-            do {
+            while (divisor <= sqrtOfNumber) {
                 if (0 == number % divisor) {
                     divisible = true;
+                    break;
                 }
 
                 divisor++;
-            } while (divisible || divisor < sqrtOfNumber);
+            };
 
             return !divisible;
         }
 
-        public long nextPrime(long number)
+        public ulong nextPrime(ulong number)
         {
-            long nextPrime = number + 1;
+            ulong nextPrime = number + 1;
 
-            while (! isPrime(nextPrime)) {
+            while (!isPrime(nextPrime)) {
                 nextPrime++;
             }
 
             return nextPrime;
         }
 
-        public long prevPrime(long number)
+        public ulong prevPrime(ulong number)
         {
-            long prevPrime = number - 1;
+            ulong prevPrime = number;
+            Boolean prevPrimeFound = isPrime(prevPrime);
 
-            while (! isPrime(prevPrime) || prevPrime < 3) {
+            while (!prevPrimeFound) {
                 prevPrime--;
-            }
+                prevPrimeFound = isPrime(prevPrime);
+            };
 
             return prevPrime;
         }
